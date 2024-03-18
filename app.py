@@ -1,5 +1,18 @@
 from flask import Flask, request, redirect, url_for
 import csv
+import os
+
+# Specify the path to the directory
+directory_path = '/data_laying.csv'
+directory_path2 = '/data_walking.csv'
+
+# Define the new permissions (in octal notation)
+new_permissions = 0o777  # Example: Read, Write, Execute for User, Group, and Others
+
+# Change the permissions of the directory
+os.chmod(directory_path, new_permissions)
+os.chmod(directory_path2, new_permissions)
+
 
 app = Flask(__name__)
 i = 0
