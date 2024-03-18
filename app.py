@@ -52,3 +52,6 @@ def add_data_walking():
         writer.writerow([acc_x,acc_y,acc_z,gyr_x,gyr_y,gyr_z,gra_x,gra_y,gra_z,a])
         j+=1
         return "Walking Data added in dataset:"+j
+    
+if __name__ == '__main__':
+    app.run(debug=True)
