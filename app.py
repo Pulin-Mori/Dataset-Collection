@@ -3,8 +3,8 @@ import csv
 import os
 
 # Specify the path to the directory
-directory_path = '/data_laying.csv'
-directory_path2 = '/data_walking.csv'
+directory_path = 'data_laying.csv'
+directory_path2 = 'data_walking.csv'
 
 # Define the new permissions (in octal notation)
 new_permissions = 0o777  # Example: Read, Write, Execute for User, Group, and Others
