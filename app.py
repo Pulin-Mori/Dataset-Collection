@@ -5,7 +5,7 @@ app = Flask(__name__)
 i=0
 j=0
 
-@app.route('/',method=['GET','POST'])
+@app.route('/')
 def  home():
     a = request.args.get("Activity")
     if a=="Laying":
