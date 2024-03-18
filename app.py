@@ -5,7 +5,7 @@ app = Flask(__name__)
 i=0
 j=0
 
-app.route('/',method=['GET','POST'])
+@app.route('/',method=['GET','POST'])
 def  home():
     a = request.args.get("Activity")
     if a=="Laying":
@@ -15,7 +15,7 @@ def  home():
     else:
         return "Error in Activity selection"
 
-app.route('/Laying')
+@app.route('/Laying')
 def add_data_laying():
     acc_x = request.args.get('Acc_x')
     acc_y = request.args.get('Acc_y')
@@ -34,7 +34,7 @@ def add_data_laying():
         i+=1
         return "Laying Data added in dataset:"+i
 
-app.route('/Walking')
+@app.route('/Walking')
 def add_data_walking():
     acc_x = request.args.get('Acc_x')
     acc_y = request.args.get('Acc_y')
