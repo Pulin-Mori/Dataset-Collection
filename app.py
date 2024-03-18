@@ -29,7 +29,7 @@ def add_data_laying():
     gra_z = request.args.get('Gra_z')
     a = "Laying"
 
-    with open("data_laying.csv", 'a', newline='') as file:
+    with open("/data_laying.csv", 'a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow([acc_x, acc_y, acc_z, gyr_x, gyr_y, gyr_z, gra_x, gra_y, gra_z, a])
         i += 1
@@ -49,7 +49,7 @@ def add_data_walking():
     gra_z = request.args.get('Gra_z')
     a = "Walking"
 
-    with open("data_walking.csv", 'a', newline='') as file:
+    with open("/data_walking.csv", 'a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow([acc_x, acc_y, acc_z, gyr_x, gyr_y, gyr_z, gra_x, gra_y, gra_z, a])
         j += 1
